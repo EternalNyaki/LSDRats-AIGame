@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,65 +12,38 @@ public class UIDropZone : UIHoverable
 
     public Color highlightColor;
 
-    public UIDraggableBlock HeldBlock
-    {
-        get { return _heldBlock; }
-        set
-        {
-            _heldBlock = value;
-            OnBlockChanged(_heldBlock);
-        }
-    }
-    private UIDraggableBlock _heldBlock;
-
-    public event EventHandler<UIDraggableBlock> BlockChanged;
+    public UIDraggableBlock heldBlock;
 
     private Image _highlight;
 
     // Start is called before the first frame update
     void Start()
     {
-        BlockChanged += AttachBlock;
-
-        _heldBlock = defaultBlock;
+        heldBlock = defaultBlock;
 
         _highlight = GetComponent<Image>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnPointerUp()
-    {
-        Debug.Log($"I am holding a block: {_heldBlock != null} \n The cursor has selected a block: {UICursorManager.Instance.selectedBlock != null}");
-        if (_heldBlock == null && UICursorManager.Instance.selectedBlock != null)
-        {
-            OnBlockChanged(UICursorManager.Instance.selectedBlock);
-        }
     }
 
     protected override void OnPointerEnter()
     {
         _highlight.color = highlightColor;
+        UICursorManager.Instance.DeselectBlock += AttachCursorManagerSelectedBlock;
     }
 
     protected override void OnPointerExit()
     {
         _highlight.color = new(0f, 0f, 0f, 0f);
+        UICursorManager.Instance.DeselectBlock -= AttachCursorManagerSelectedBlock;
     }
 
-    private void AttachBlock(object sender, UIDraggableBlock block)
+    private void AttachCursorManagerSelectedBlock()
     {
-        HeldBlock = block;
-        _heldBlock.transform.parent = transform;
-        _heldBlock.transform.localPosition = Vector3.zero;
+        AttachBlock(UICursorManager.Instance.selectedBlock);
     }
 
-    private void OnBlockChanged(UIDraggableBlock block)
+    private void AttachBlock(UIDraggableBlock block)
     {
-        BlockChanged?.Invoke(this, block);
+        heldBlock = block;
+        block.rectTransform.anchoredPosition = rectTransform.anchoredPosition;
     }
 }

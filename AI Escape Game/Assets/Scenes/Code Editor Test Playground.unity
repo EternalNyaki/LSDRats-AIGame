@@ -224,7 +224,6 @@ GameObject:
   m_Component:
   - component: {fileID: 614541977}
   - component: {fileID: 614541979}
-  - component: {fileID: 614541978}
   m_Layer: 5
   m_Name: Cursor Manager
   m_TagString: Untagged
@@ -251,67 +250,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &614541978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614541976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 614541979}
-          m_TargetAssemblyTypeName: UICursorManager, Assembly-CSharp
-          m_MethodName: OnPointerDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 614541979}
-          m_TargetAssemblyTypeName: UICursorManager, Assembly-CSharp
-          m_MethodName: OnPointerUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 614541979}
-          m_TargetAssemblyTypeName: UICursorManager, Assembly-CSharp
-          m_MethodName: OnDrag
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &614541979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa102f42a678a14ebb328fabbffc3f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoveredBlocks: []
 --- !u!1 &1019226823
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99852bf4700c5d4db04a4892577c88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rectTransform: {fileID: 1160550304}
   highlightColor: {r: 0.4490565, g: 0.4490565, b: 0.4490565, a: 0.3137255}
 --- !u!114 &1160550307
 MonoBehaviour:
@@ -563,13 +501,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
+  - eventID: 13
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1160550306}
           m_TargetAssemblyTypeName: UIDraggableBlock, Assembly-CSharp
-          m_MethodName: OnPointerEnter
+          m_MethodName: OnStartDrag
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -579,13 +517,29 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 1
+  - eventID: 5
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1160550306}
           m_TargetAssemblyTypeName: UIDraggableBlock, Assembly-CSharp
-          m_MethodName: OnPointerExit
+          m_MethodName: OnDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1160550306}
+          m_TargetAssemblyTypeName: UIDraggableBlock, Assembly-CSharp
+          m_MethodName: OnDrop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -604,8 +558,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235405265}
+  - component: {fileID: 1235405270}
   - component: {fileID: 1235405267}
-  - component: {fileID: 1235405268}
+  - component: {fileID: 1235405269}
   m_Layer: 5
   m_Name: Drop Zone
   m_TagString: Untagged
@@ -627,11 +582,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1322081075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -640, y: 408}
   m_SizeDelta: {x: 500, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235405267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,8 +599,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e475d83027c71749a049763250939f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rectTransform: {fileID: 1235405265}
   defaultBlock: {fileID: 0}
---- !u!114 &1235405268
+  highlightColor: {r: 0.4415095, g: 0.4415095, b: 0.4415095, a: 0.69803923}
+  heldBlock: {fileID: 0}
+--- !u!222 &1235405269
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235405264}
+  m_CullTransparentMesh: 1
+--- !u!114 &1235405270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,26 +620,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1235405264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1235405267}
-          m_TargetAssemblyTypeName: UIDropZone, Assembly-CSharp
-          m_MethodName: OnPointerUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1322081071
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,8 +736,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1507460516}
-  - {fileID: 1160550304}
   - {fileID: 1235405265}
+  - {fileID: 1160550304}
   - {fileID: 614541977}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

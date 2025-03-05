@@ -19,12 +19,6 @@ public class UIDraggableBlock : UIHoverable
         _highlight = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Reset()
     {
         transform.position = _initialPosition;
@@ -43,6 +37,8 @@ public class UIDraggableBlock : UIHoverable
     public void OnStartDrag()
     {
         _mouseOffset = transform.position - Input.mousePosition;
+
+        UICursorManager.Instance.OnSelectBlock(this);
     }
 
     public void OnDrag()
@@ -53,5 +49,10 @@ public class UIDraggableBlock : UIHoverable
     public void OnDrop()
     {
         Reset();
+
+        if (UICursorManager.Instance.selectedBlock == this)
+        {
+            UICursorManager.Instance.OnDeselectBlock();
+        }
     }
 }

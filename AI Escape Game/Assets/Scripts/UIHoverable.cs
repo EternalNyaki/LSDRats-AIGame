@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class UIHoverable : MonoBehaviour
 {
-    private bool _wasHovered;
+    protected bool _isHovered;
+    protected bool _wasHovered;
 
-    private RectTransform _rectTransform;
+    public RectTransform rectTransform;
 
     // Start is called before the first frame update
     void Start()
     {
-        _rectTransform = GetComponent<RectTransform>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool isHovered = _rectTransform.rect.Contains(Input.mousePosition);
+        _isHovered = RectTransformUtility.RectangleContainsScreenPoint(rectTransform, Input.mousePosition);
 
-        if (isHovered && !_wasHovered)
+        if (_isHovered && !_wasHovered)
         {
             OnPointerEnter();
         }
-        else if (!isHovered && _wasHovered)
+        else if (!_isHovered && _wasHovered)
         {
             OnPointerExit();
         }
 
-        _wasHovered = isHovered;
+        if (_isHovered && Input.GetMouseButtonDown(0))
+        {
+            OnPointerDown();
+        }
+        else if (_isHovered && Input.GetMouseButtonUp(0))
+        {
+            OnPointerUp();
+        }
+
+        _wasHovered = _isHovered;
     }
 
     protected virtual void OnPointerEnter() { }
-
     protected virtual void OnPointerExit() { }
+    protected virtual void OnPointerDown() { }
+    protected virtual void OnPointerUp() { }
 }
