@@ -1,8 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,15 +6,14 @@ public class UIDropZone : UIHoverable
 {
     public UIDraggableBlock defaultBlock;
 
-    public Color highlightColor;
-
-    public UIDraggableBlock heldBlock;
-
-    private Image _highlight;
+    [NonSerialized] public UIDraggableBlock heldBlock;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Initialize()
     {
+        base.Initialize();
+
+        if (defaultBlock != null) { defaultBlock.rectTransform.parent = transform; }
         heldBlock = defaultBlock;
 
         _highlight = GetComponent<Image>();
@@ -26,13 +21,18 @@ public class UIDropZone : UIHoverable
 
     protected override void OnPointerEnter()
     {
-        _highlight.color = highlightColor;
-        UICursorManager.Instance.DeselectBlock += AttachCursorManagerSelectedBlock;
+        base.OnPointerEnter();
+
+        if (heldBlock == null)
+        {
+            UICursorManager.Instance.DeselectBlock += AttachCursorManagerSelectedBlock;
+        }
     }
 
     protected override void OnPointerExit()
     {
-        _highlight.color = new(0f, 0f, 0f, 0f);
+        base.OnPointerExit();
+
         UICursorManager.Instance.DeselectBlock -= AttachCursorManagerSelectedBlock;
     }
 
@@ -44,6 +44,13 @@ public class UIDropZone : UIHoverable
     private void AttachBlock(UIDraggableBlock block)
     {
         heldBlock = block;
-        block.rectTransform.anchoredPosition = rectTransform.anchoredPosition;
+        block.rectTransform.SetParent(rectTransform, false);
+        block.rectTransform.anchoredPosition = Vector2.zero;
+    }
+
+    private void DetachBlock()
+    {
+        heldBlock.rectTransform.SetParent(rectTransform.parent, true);
+        heldBlock = null;
     }
 }

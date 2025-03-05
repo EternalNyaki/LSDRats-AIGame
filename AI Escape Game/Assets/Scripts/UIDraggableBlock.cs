@@ -1,19 +1,18 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIDraggableBlock : UIHoverable
 {
-    public Color highlightColor;
-
     private Vector2 _mouseOffset;
 
     private Vector3 _initialPosition;
 
-    private Image _highlight;
-
     // Start is called before the first frame update
-    void Start()
+    protected override void Initialize()
     {
+        base.Initialize();
+
         _initialPosition = transform.position;
 
         _highlight = GetComponent<Image>();
@@ -21,32 +20,26 @@ public class UIDraggableBlock : UIHoverable
 
     public void Reset()
     {
-        transform.position = _initialPosition;
+
     }
 
-    protected override void OnPointerEnter()
-    {
-        _highlight.color = highlightColor;
-    }
-
-    protected override void OnPointerExit()
-    {
-        _highlight.color = new(0f, 0f, 0f, 0f);
-    }
-
-    public void OnStartDrag()
+    protected override void OnPointerDown()
     {
         _mouseOffset = transform.position - Input.mousePosition;
 
         UICursorManager.Instance.OnSelectBlock(this);
+
+        rectTransform.parent.GetComponent<UIDropZone>()?.SendMessage("DetachBlock");
     }
 
-    public void OnDrag()
+    protected override void OnPointerHold()
     {
+        if (UICursorManager.Instance.selectedBlock != this) { return; }
+
         transform.position = (Vector2)Input.mousePosition + _mouseOffset;
     }
 
-    public void OnDrop()
+    protected override void OnPointerUp()
     {
         Reset();
 
