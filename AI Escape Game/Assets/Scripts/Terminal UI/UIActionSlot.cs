@@ -13,7 +13,7 @@ public class UIActionSlot : UIDropZone
         }
     }
 
-    public Action GetAttachedAction()
+    public Action<object> GetAttachedAction()
     {
         return ((UICodeAction)heldBlock).value;
     }

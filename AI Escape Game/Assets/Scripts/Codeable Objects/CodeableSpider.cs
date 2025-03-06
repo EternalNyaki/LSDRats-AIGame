@@ -6,21 +6,37 @@ public class CodeableSpider : CodeableObject
 {
     public float movementStuckTolerance = 0.1f;
 
-    private float speed = 4;
-    private Vector2 direction = CodeProperties.FromDirection(CodeProperties.Direction.Horizontal);
+    private float _speed = 4;
+    private Vector2 _direction = CodeProperties.FromDirection(CodeProperties.Direction.Vertical);
+
+    private Rigidbody2D _rb2d;
+
+    protected override void Initialize()
+    {
+        base.Initialize();
+
+        _rb2d = GetComponent<Rigidbody2D>();
+    }
 
     protected override void UpdateProperties()
     {
         base.UpdateProperties();
+
+        _speed = (float)properties["Speed Field"];
+        _direction = (Vector2)properties["Direction Field"];
     }
 
-    public virtual void Move()
+    public static void Move(object sender)
     {
-        Vector2 temp = transform.position;
-        transform.Translate(direction * speed * Time.deltaTime);
-        if ((temp - (Vector2)transform.position).magnitude <= movementStuckTolerance * Time.deltaTime)
+        ((CodeableSpider)sender)?.MoveSelf();
+    }
+
+    protected virtual void MoveSelf()
+    {
+        if (_rb2d.velocity.magnitude <= movementStuckTolerance * Time.deltaTime)
         {
-            direction *= -1;
+            _direction *= -1;
         }
+        _rb2d.velocity = _direction * _speed;
     }
 }

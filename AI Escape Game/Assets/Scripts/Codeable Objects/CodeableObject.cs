@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class CodeableObject : MonoBehaviour
 {
     public Dictionary<string, object> properties;
-    public List<Action> actions;
+    public List<Action<object>> actions;
 
     public GameObject terminalCodeSection;
 
@@ -20,7 +20,7 @@ public abstract class CodeableObject : MonoBehaviour
     protected virtual void Initialize()
     {
         properties = new Dictionary<string, object>();
-        actions = new List<Action>();
+        actions = new List<Action<object>>();
     }
 
     void OnEnable()
@@ -98,9 +98,9 @@ public abstract class CodeableObject : MonoBehaviour
 
     protected virtual void PlayActions()
     {
-        foreach (Action a in actions)
+        foreach (Action<object> a in actions)
         {
-            a.Invoke();
+            a.Invoke(this);
         }
     }
 }

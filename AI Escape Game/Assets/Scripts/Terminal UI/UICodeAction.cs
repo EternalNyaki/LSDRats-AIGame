@@ -5,9 +5,9 @@ using UnityEngine.Events;
 [CodeBlockType(CodeBlockType.Action)]
 public class UICodeAction : UICodeBlock
 {
-    public UnityEvent action;
+    public UnityEvent<object> action;
 
-    public Action value;
+    public Action<object> value;
 
     protected override void Initialize()
     {
