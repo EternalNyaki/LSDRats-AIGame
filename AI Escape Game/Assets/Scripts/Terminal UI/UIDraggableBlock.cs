@@ -25,6 +25,8 @@ public class UIDraggableBlock : UIHoverable
 
     protected override void OnPointerDown()
     {
+        if (GetComponentInParent<UIDropZone>() != null && GetComponentInParent<UIDropZone>().locked) { return; }
+
         _mouseOffset = transform.position - Input.mousePosition;
 
         UICursorManager.Instance.OnSelectBlock(this);
@@ -34,6 +36,8 @@ public class UIDraggableBlock : UIHoverable
 
     protected override void OnPointerHold()
     {
+        if (GetComponentInParent<UIDropZone>() != null && GetComponentInParent<UIDropZone>().locked) { return; }
+
         if (UICursorManager.Instance.selectedBlock != this) { return; }
 
         transform.position = (Vector2)Input.mousePosition + _mouseOffset;
@@ -41,6 +45,8 @@ public class UIDraggableBlock : UIHoverable
 
     protected override void OnPointerUp()
     {
+        if (GetComponentInParent<UIDropZone>() != null && GetComponentInParent<UIDropZone>().locked) { return; }
+
         Reset();
 
         if (UICursorManager.Instance.selectedBlock == this)

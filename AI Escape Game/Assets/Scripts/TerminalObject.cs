@@ -13,25 +13,13 @@ public class TerminalObject : InteractableObject
 
     public override void Interact()
     {
-        if (terminalUI.gameObject.activeInHierarchy)
+        if (PauseModeManager.Instance.pauseMode == PauseMode.Terminal)
         {
-            terminalUI.gameObject.SetActive(false);
-            foreach (CodeableObject o in FindObjectsOfType<CodeableObject>())
-            {
-                o.enabled = true;
-            }
-
-            FindObjectOfType<RPGMovement>().enabled = true;
+            PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
         }
-        else
+        else if (PauseModeManager.Instance.pauseMode == PauseMode.Unpaused)
         {
-            terminalUI.gameObject.SetActive(true);
-            foreach (CodeableObject o in FindObjectsOfType<CodeableObject>())
-            {
-                o.enabled = false;
-            }
-
-            FindObjectOfType<RPGMovement>().enabled = false;
+            PauseModeManager.Instance.SetPauseMode(PauseMode.Terminal);
         }
     }
 }
