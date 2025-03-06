@@ -23,6 +23,8 @@ public class CodeableShape : CodeableObject
     {
         base.UpdateProperties();
 
+        _spriteRenderer.color = (Color)properties["Color Field"];
+
         switch ((CodeProperties.Shape)properties["Shape Field"])
         {
             case CodeProperties.Shape.Cube:
