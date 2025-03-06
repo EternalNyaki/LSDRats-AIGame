@@ -48,7 +48,7 @@ public class UIDropZone : UIHoverable
         block.rectTransform.anchoredPosition = Vector2.zero;
     }
 
-    private void DetachBlock()
+    public void DetachBlock()
     {
         heldBlock.rectTransform.SetParent(rectTransform.parent, true);
         heldBlock = null;

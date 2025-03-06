@@ -29,7 +29,7 @@ public class UIDraggableBlock : UIHoverable
 
         UICursorManager.Instance.OnSelectBlock(this);
 
-        rectTransform.parent.GetComponent<UIDropZone>()?.SendMessage("DetachBlock");
+        GetComponentInParent<UIDropZone>()?.DetachBlock();
     }
 
     protected override void OnPointerHold()
