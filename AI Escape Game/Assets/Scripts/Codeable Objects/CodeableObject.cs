@@ -69,6 +69,10 @@ public abstract class CodeableObject : MonoBehaviour
                         case CodeProperties.PropertyType.Shape:
                             properties.Add(codeSlot.gameObject.name, (CodeProperties.Shape)codeSlot.GetAttachedPropertyValue());
                             break;
+
+                        case CodeProperties.PropertyType.Direction:
+                            properties.Add(codeSlot.gameObject.name, CodeProperties.FromDirection((CodeProperties.Direction)codeSlot.GetAttachedPropertyValue()));
+                            break;
                     }
                     break;
             }
@@ -94,6 +98,9 @@ public abstract class CodeableObject : MonoBehaviour
 
     protected virtual void PlayActions()
     {
-
+        foreach (Action a in actions)
+        {
+            a.Invoke();
+        }
     }
 }

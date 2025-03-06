@@ -6,6 +6,8 @@ public class UIDropZone : UIHoverable
 {
     public UIDraggableBlock defaultBlock;
 
+    public bool locked;
+
     [NonSerialized] public UIDraggableBlock heldBlock;
 
 #if UNITY_EDITOR
@@ -30,7 +32,7 @@ public class UIDropZone : UIHoverable
     {
         base.OnPointerEnter();
 
-        if (heldBlock == null)
+        if (heldBlock == null && !locked)
         {
             UICursorManager.Instance.DeselectBlock += AttachCursorManagerSelectedBlock;
         }
@@ -40,7 +42,10 @@ public class UIDropZone : UIHoverable
     {
         base.OnPointerExit();
 
-        UICursorManager.Instance.DeselectBlock -= AttachCursorManagerSelectedBlock;
+        if (!locked)
+        {
+            UICursorManager.Instance.DeselectBlock -= AttachCursorManagerSelectedBlock;
+        }
     }
 
     private void AttachCursorManagerSelectedBlock()
@@ -50,14 +55,20 @@ public class UIDropZone : UIHoverable
 
     protected virtual void AttachBlock(UIDraggableBlock block)
     {
-        heldBlock = block;
-        block.rectTransform.SetParent(rectTransform, false);
-        block.rectTransform.anchoredPosition = Vector2.zero;
+        if (!locked)
+        {
+            heldBlock = block;
+            block.rectTransform.SetParent(rectTransform, false);
+            block.rectTransform.anchoredPosition = Vector2.zero;
+        }
     }
 
     public virtual void DetachBlock()
     {
-        heldBlock.rectTransform.SetParent(rectTransform.parent, true);
-        heldBlock = null;
+        if (!locked)
+        {
+            heldBlock.rectTransform.SetParent(rectTransform.parent, true);
+            heldBlock = null;
+        }
     }
 }
