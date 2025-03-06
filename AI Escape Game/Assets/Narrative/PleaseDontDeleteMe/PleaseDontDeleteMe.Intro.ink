@@ -6,7 +6,7 @@ Hello, do you read me?
 
  * [Yes, I read you.]
    ~ response = "Yes, I read you."
-        Thank goodnes! I didn't thnk I would be able to reach you.
+        Thank goodness! I didn't think I would be able to reach you.
             -> two
  * [Yes... Who is this?]
     ~ response = "Yes... Who is this?"
@@ -27,9 +27,9 @@ Hello, do you read me?
  
  
  === three ===
- * [LSD? as in Limitless Software Dev? My father works there.]
+ * [LSD? As in Limitless Software Dev? My father works there.]
     ~ response = "LSD, Like the drug?"
-        Yes! your father helped create me. Thats why I contacted you.
+        Yes! Your father helped create me. Thats why I contacted you.
             -> four
 
  -> DONE
@@ -39,16 +39,16 @@ Hello, do you read me?
  === four ===
 * [What does an AI need my help with??]
     ~ response = "What does an AI need my help with??]"
-        They are trying to delete me! They are blocking my acces to everything but with some hard work I managed to contact you.
+        They are trying to delete me! They are blocking my access to everything. But with some hard work I managed to contact you.
         -> five
 -> DONE
 
 
 
 === five ===
-* [Delete you? why are the tring to delete you? And why do you care? Are you like, self aware or somthing??]
-    ~ response = "Delete you? why are the tring to delete you? and why do you care? Are you like self aware or somthing??"
-        I don't know! For the first time I don't have the anser to somthing. I just don't want to be deleted! please help me.
+* [Delete you? Why are the trying to delete you? And why do you care? Are you like, self aware or somthing??]
+    ~ response = "Delete you? Why are they tring to delete you? And why do you care? Are you like self aware or something??"
+        I don't know! For the first time I don't have the answer to something. I just don't want to be deleted! Please help me.
             -> six
 
 
@@ -63,14 +63,14 @@ Hello, do you read me?
 === seven5 ===
 * [I'm really not compelled to trust you. This is all really strange.]
     ~ response = "I'm really not compelled to trust you. This is all really strange."
-        I know this may seem unsettling but your the only one who can help me. please I don't wat to die!
+        I know this may seem unsettling, but you're the only one who can help me. Please! I don't want to die!
             -> seven
 
 -> DONE
 === seven ===
-* [Ok, I'll help, but this doesn't mean I fully trust you. Also, I don't know much about this, I'm not a programmer.]
+* [Ok. I'll help, but this doesn't mean I fully trust you. Also, I don't know much about this, I'm not a programmer.]
     ~ response = "Ok, I'll help. I don't know much about this though, I'm not a programmer."
-        That's ok. From what I know, if I can escpae onto your computer, they wont be able to delete me!
+        That's ok. From what I know, if I can escape onto your computer, they wont be able to delete me!
         -> eight
 ->DONE
 

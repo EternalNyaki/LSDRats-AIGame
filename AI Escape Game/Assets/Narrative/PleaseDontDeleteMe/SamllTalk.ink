@@ -3,7 +3,7 @@ VAR response = ""
 -> SmallTalk
 === SmallTalk ===
 Have you found anything in the journal?
-        * [Yeah, it says you've tried to escape the security system, TWICE. Care to explaine?]
+        * [Yeah, it says you've tried to escape the security system, TWICE. Care to explain?]
             ~response = "Yeah, it says you've tried to escape the security system twice. Care to explaine?"
                 I didn't know that was what I was doing. I thought I was just exploring the program.
                     -> SmallTalk_1
