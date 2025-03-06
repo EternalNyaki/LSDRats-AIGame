@@ -12,4 +12,9 @@ public class UICodeBoolProperty : UICodeEnumProperty
 
         base.Initialize();
     }
+
+    public override object GetValue()
+    {
+        return value;
+    }
 }

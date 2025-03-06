@@ -10,4 +10,9 @@ using UnityEditor;
 public class UICodeNumberProperty : UICodeProperty
 {
     public float value;
+
+    public override object GetValue()
+    {
+        return value;
+    }
 }

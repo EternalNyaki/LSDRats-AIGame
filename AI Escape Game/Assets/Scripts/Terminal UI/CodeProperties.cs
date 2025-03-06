@@ -57,6 +57,16 @@ public static class CodeProperties
         }
     }
 
+    public static PropertyType PropertyTypeFromType(Type t)
+    {
+        if (t == typeof(int)) { return PropertyType.Integer; }
+        if (t == typeof(float)) { return PropertyType.Float; }
+        if (t == typeof(bool) || t == typeof(BoolValue)) { return PropertyType.Boolean; }
+        if (t == typeof(Color) || t == typeof(ColorValue)) { return PropertyType.Color; }
+
+        throw new ArgumentException($"Type {t} has no associated property type");
+    }
+
     public static bool FromBoolValue(BoolValue value)
     {
         switch (value)

@@ -16,17 +16,15 @@ public class UIHoverable : MonoBehaviour
     protected Image _highlight;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        _highlight = GetComponent<Image>();
-        _highlight.color = defaultColor;
-
         Initialize();
     }
 
     protected virtual void Initialize()
     {
-
+        _highlight = GetComponent<Image>();
+        _highlight.color = defaultColor;
     }
 
     // Update is called once per frame

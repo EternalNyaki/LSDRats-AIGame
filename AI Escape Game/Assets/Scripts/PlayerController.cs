@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
             if (terminalUI.gameObject.activeInHierarchy)
             {
                 terminalUI.gameObject.SetActive(false);
-                foreach (CodableObject o in FindObjectsOfType<CodableObject>())
+                foreach (CodeableObject o in FindObjectsOfType<CodeableObject>())
                 {
                     o.enabled = true;
                 }
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 terminalUI.gameObject.SetActive(true);
-                foreach (CodableObject o in FindObjectsOfType<CodableObject>())
+                foreach (CodeableObject o in FindObjectsOfType<CodeableObject>())
                 {
                     o.enabled = false;
                 }

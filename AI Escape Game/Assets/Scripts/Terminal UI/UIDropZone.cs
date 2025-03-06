@@ -8,15 +8,22 @@ public class UIDropZone : UIHoverable
 
     [NonSerialized] public UIDraggableBlock heldBlock;
 
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        if (heldBlock == null && defaultBlock != null)
+        {
+            heldBlock = defaultBlock;
+        }
+    }
+#endif
+
     // Start is called before the first frame update
     protected override void Initialize()
     {
         base.Initialize();
 
-        if (defaultBlock != null) { defaultBlock.rectTransform.parent = transform; }
-        heldBlock = defaultBlock;
-
-        _highlight = GetComponent<Image>();
+        if (defaultBlock != null) { AttachBlock(defaultBlock); }
     }
 
     protected override void OnPointerEnter()
@@ -41,14 +48,14 @@ public class UIDropZone : UIHoverable
         AttachBlock(UICursorManager.Instance.selectedBlock);
     }
 
-    private void AttachBlock(UIDraggableBlock block)
+    protected virtual void AttachBlock(UIDraggableBlock block)
     {
         heldBlock = block;
         block.rectTransform.SetParent(rectTransform, false);
         block.rectTransform.anchoredPosition = Vector2.zero;
     }
 
-    public void DetachBlock()
+    public virtual void DetachBlock()
     {
         heldBlock.rectTransform.SetParent(rectTransform.parent, true);
         heldBlock = null;
