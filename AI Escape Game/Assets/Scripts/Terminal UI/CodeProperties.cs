@@ -10,19 +10,9 @@ public static class CodeProperties
         Integer,
         Float,
         Boolean,
-        Color
-    }
-
-    public enum NumberType
-    {
-        Integer = PropertyType.Integer,
-        Float = PropertyType.Float
-    }
-
-    public enum EnumType
-    {
-        Boolean = PropertyType.Boolean,
-        Color = PropertyType.Color
+        Color,
+        Size,
+        Shape
     }
 
     public enum BoolValue
@@ -44,6 +34,19 @@ public static class CodeProperties
         Black
     }
 
+    public enum Size
+    {
+        Small,
+        Medium,
+        Large
+    }
+
+    public enum Shape
+    {
+        Cube,
+        Sphere
+    }
+
     public static Type ConvertToType(PropertyType p)
     {
         switch (p)
@@ -52,6 +55,8 @@ public static class CodeProperties
             case PropertyType.Float: return typeof(float);
             case PropertyType.Boolean: return typeof(BoolValue);
             case PropertyType.Color: return typeof(ColorValue);
+            case PropertyType.Size: return typeof(Size);
+            case PropertyType.Shape: return typeof(Shape);
 
             default: throw new Exception($"PropertyType {p} does not have an associated type");
         }
@@ -63,6 +68,8 @@ public static class CodeProperties
         if (t == typeof(float)) { return PropertyType.Float; }
         if (t == typeof(bool) || t == typeof(BoolValue)) { return PropertyType.Boolean; }
         if (t == typeof(Color) || t == typeof(ColorValue)) { return PropertyType.Color; }
+        if (t == typeof(Size)) { return PropertyType.Size; }
+        if (t == typeof(Shape)) { return PropertyType.Shape; }
 
         throw new ArgumentException($"Type {t} has no associated property type");
     }

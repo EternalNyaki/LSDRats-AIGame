@@ -61,6 +61,14 @@ public abstract class CodeableObject : MonoBehaviour
                         case CodeProperties.PropertyType.Color:
                             properties.Add(codeSlot.gameObject.name, CodeProperties.FromColorValue((CodeProperties.ColorValue)codeSlot.GetAttachedPropertyValue()));
                             break;
+
+                        case CodeProperties.PropertyType.Size:
+                            properties.Add(codeSlot.gameObject.name, (CodeProperties.Size)codeSlot.GetAttachedPropertyValue());
+                            break;
+
+                        case CodeProperties.PropertyType.Shape:
+                            properties.Add(codeSlot.gameObject.name, (CodeProperties.Shape)codeSlot.GetAttachedPropertyValue());
+                            break;
                     }
                     break;
             }

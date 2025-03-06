@@ -35,4 +35,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void Die()
+    {
+        Debug.Log("Critical Error: Program File Does Not Exist. jk lol this functionality doesn't exist yet");
+    }
 }
