@@ -18,15 +18,13 @@ public class CodeableHungrySpider : CodeableSpider
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
-
-        cookie = Physics2D.OverlapCircle(transform.position, 100f, cookieLayerMask)?.GetComponent<Cookie>();
     }
 
     protected override void MoveSelf()
     {
         if (cookie == null)
         {
-            //vibrate?
+            cookie = Physics2D.OverlapCircle(transform.position, 10f, cookieLayerMask)?.GetComponent<Cookie>();
         }
         else
         {
