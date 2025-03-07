@@ -108,9 +108,45 @@ PrefabInstance:
       propertyPath: defaultBlock
       value: 
       objectReference: {fileID: 8995313383352394601}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: defaultColor.a
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.a
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.b
+      value: 0.43529415
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.g
+      value: 0.43529415
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.r
+      value: 0.43529415
+      objectReference: {fileID: 0}
     - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: value
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: highlightColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3955376447912976970, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: m_SizeDelta.x

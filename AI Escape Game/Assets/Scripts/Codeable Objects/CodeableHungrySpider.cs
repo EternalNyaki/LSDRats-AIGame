@@ -13,8 +13,6 @@ public class CodeableHungrySpider : CodeableSpider
 
     protected override void UpdateProperties()
     {
-        base.UpdateProperties();
-
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;

@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 3425958245857155515}
-  defaultColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.29803923}
-  highlightColor: {r: 0.6132076, g: 0.6103151, b: 0.6103151, a: 0.8235294}
+  defaultColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.74509805}
+  highlightColor: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0.74509805}
   defaultBlock: {fileID: 4651377821026155860}
   locked: 1
 --- !u!224 &3425958245857155515 stripped
@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 608397754728249918}
-  defaultColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.29803923}
-  highlightColor: {r: 0.6132076, g: 0.6103151, b: 0.6103151, a: 0.8235294}
+  defaultColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.74509805}
+  highlightColor: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0.74509805}
   defaultBlock: {fileID: 5095866302190674648}
   locked: 1
 --- !u!1001 &3778542443084655713
@@ -278,6 +278,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7092835190433074301}
     m_Modifications:
+    - target: {fileID: 551770654934349580, guid: b53bf5eac1865594ea217290d4f4fa2c, type: 3}
+      propertyPath: highlightColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551770654934349580, guid: b53bf5eac1865594ea217290d4f4fa2c, type: 3}
+      propertyPath: highlightColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551770654934349580, guid: b53bf5eac1865594ea217290d4f4fa2c, type: 3}
+      propertyPath: highlightColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551770654934349580, guid: b53bf5eac1865594ea217290d4f4fa2c, type: 3}
+      propertyPath: highlightColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 551770654934349580, guid: b53bf5eac1865594ea217290d4f4fa2c, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -555,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 7876103235857587398}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 0.53333336}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
   value: 1
 --- !u!224 &7876103235857587398 stripped
 RectTransform:
@@ -601,6 +617,22 @@ PrefabInstance:
     - target: {fileID: 6149945531014660673, guid: 74df38ada59313f40bd312dbb9704630, type: 3}
       propertyPath: value
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149945531014660673, guid: 74df38ada59313f40bd312dbb9704630, type: 3}
+      propertyPath: highlightColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149945531014660673, guid: 74df38ada59313f40bd312dbb9704630, type: 3}
+      propertyPath: highlightColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149945531014660673, guid: 74df38ada59313f40bd312dbb9704630, type: 3}
+      propertyPath: highlightColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149945531014660673, guid: 74df38ada59313f40bd312dbb9704630, type: 3}
+      propertyPath: highlightColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6210686960025764418, guid: 74df38ada59313f40bd312dbb9704630, type: 3}
       propertyPath: m_Pivot.x
@@ -829,8 +861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 7092835190433074301}
-  defaultColor: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0.34117648}
-  highlightColor: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 0.74509805}
+  defaultColor: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0.74509805}
+  highlightColor: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0.74509805}
   defaultBlock: {fileID: 3735837224820054893}
   locked: 1
 --- !u!224 &7092835190433074301 stripped
@@ -1117,7 +1149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 3948131822627998997}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 0.53333336}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
   value: 4
 --- !u!1001 &8059746365323329013
 PrefabInstance:
@@ -1250,7 +1282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 5720777412668197557}
-  defaultColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.29803923}
-  highlightColor: {r: 0.6132076, g: 0.6103151, b: 0.6103151, a: 0.8235294}
+  defaultColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.74509805}
+  highlightColor: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0.74509805}
   defaultBlock: {fileID: 1479158062528501952}
   locked: 1

@@ -6,10 +6,10 @@ public class CodeableSpider : CodeableObject
 {
     public float movementStuckTolerance = 0.1f;
 
-    private float _speed = 4;
-    private Vector2 _direction = CodeProperties.FromDirection(CodeProperties.Direction.Vertical);
+    protected float _speed = 4;
+    protected Vector2 _direction = CodeProperties.FromDirection(CodeProperties.Direction.Vertical);
 
-    private Rigidbody2D _rb2d;
+    protected Rigidbody2D _rb2d;
 
     protected override void Initialize()
     {

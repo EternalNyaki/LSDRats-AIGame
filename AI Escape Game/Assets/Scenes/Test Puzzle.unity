@@ -659,49 +659,9 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1449982029}
-    - target: {fileID: 5688179043260599043, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: terminalUI
-      value: 
-      objectReference: {fileID: 1838018637}
-    - target: {fileID: 6232870075452359578, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232870075452359578, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232870075452359578, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232870075452359578, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.325
-      objectReference: {fileID: 0}
     - target: {fileID: 6643950725065328490, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643950725065328490, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643950725065328490, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7300106231115204434, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7300106231115204434, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7300106231115204434, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7300106231115204434, guid: 34442c19dfac6b8448d5c76dcde6e70a, type: 3}
       propertyPath: m_LocalPosition.x
