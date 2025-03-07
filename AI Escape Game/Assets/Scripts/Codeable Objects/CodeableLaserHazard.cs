@@ -32,7 +32,7 @@ public class CodeableLaserHazard : CodeableObject
     {
         base.PlayActions();
 
-        RaycastHit2D terrainHit = Physics2D.Raycast(transform.position, transform.up, 100f, terrainLayerMask);
+        RaycastHit2D terrainHit = Physics2D.Raycast(transform.position, transform.up, 200f, terrainLayerMask);
         RaycastHit2D shapeHit;
         RaycastHit2D[] damageHits;
         if (terrainHit)
@@ -40,27 +40,27 @@ public class CodeableLaserHazard : CodeableObject
             shapeHit = Physics2D.Raycast(transform.position, transform.up, terrainHit.distance, shapeLayerMask);
             if (shapeHit && shapeHit.collider.GetComponent<CodeableShape>().color == laserColor)
             {
-                _lineRenderer.SetPosition(1, transform.worldToLocalMatrix * new Vector2(0f, shapeHit.distance));
+                _lineRenderer.SetPosition(1, new Vector2(0f, shapeHit.distance) / transform.localScale);
                 damageHits = Physics2D.RaycastAll(transform.position, transform.up, shapeHit.distance, hitLayerMask);
             }
             else
             {
-                _lineRenderer.SetPosition(1, transform.worldToLocalMatrix * new Vector2(0f, terrainHit.distance));
+                _lineRenderer.SetPosition(1, new Vector2(0f, terrainHit.distance) / transform.localScale);
                 damageHits = Physics2D.RaycastAll(transform.position, transform.up, terrainHit.distance, hitLayerMask);
             }
         }
         else
         {
-            shapeHit = Physics2D.Raycast(transform.position, transform.up, 100f, shapeLayerMask);
+            shapeHit = Physics2D.Raycast(transform.position, transform.up, 200f, shapeLayerMask);
             if (shapeHit && shapeHit.collider.GetComponent<CodeableShape>().color == laserColor)
             {
-                _lineRenderer.SetPosition(1, transform.worldToLocalMatrix * new Vector2(0f, shapeHit.distance));
+                _lineRenderer.SetPosition(1, new Vector2(0f, shapeHit.distance) / transform.localScale);
                 damageHits = Physics2D.RaycastAll(transform.position, transform.up, shapeHit.distance, hitLayerMask);
             }
             else
             {
-                _lineRenderer.SetPosition(1, new(0f, 100f));
-                damageHits = Physics2D.RaycastAll(transform.position, transform.up, 100f, hitLayerMask);
+                _lineRenderer.SetPosition(1, new(0f, 200f));
+                damageHits = Physics2D.RaycastAll(transform.position, transform.up, 200f, hitLayerMask);
             }
         }
 
