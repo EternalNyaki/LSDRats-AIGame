@@ -20,7 +20,7 @@ public class Cookie : InteractableObject
         }
         else
         {
-            transform.SetParent(holder.parent, true);
+            transform.SetParent(null);
             holder = null;
         }
     }

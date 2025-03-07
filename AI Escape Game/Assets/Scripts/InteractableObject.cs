@@ -20,8 +20,11 @@ public class InteractableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //If the triggering collider is a player, get a reference to it
-        _player = collision.gameObject.GetComponent<PlayerController>();
+        if (_player == null)
+        {
+            //If the triggering collider is a player, get a reference to it
+            _player = collision.gameObject.GetComponent<PlayerController>();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

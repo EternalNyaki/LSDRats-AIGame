@@ -24,7 +24,7 @@ public class CodeableCookieHolder : CodeableObject
         {
             heldCookie = collision.gameObject;
             heldCookie.transform.SetParent(transform, true);
-            heldCookie.transform.position = Vector2.zero;
+            heldCookie.transform.position = transform.position;
 
             heldCookie.GetComponent<Collider2D>().enabled = false;
 

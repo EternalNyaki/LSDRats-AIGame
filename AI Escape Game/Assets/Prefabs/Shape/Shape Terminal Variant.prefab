@@ -1205,7 +1205,7 @@ PrefabInstance:
     - target: {fileID: 7615520254885025492, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: m_text
       value: "Shape {\n\t\n\tDrawShape(Shape:              , Size:                
-        , Color:                 );\n\n\t}\n\n}"
+        , Color:                 );\n\n}"
       objectReference: {fileID: 0}
     - target: {fileID: 8041987630642083089, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: m_SizeDelta.x

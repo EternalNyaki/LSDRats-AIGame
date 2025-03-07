@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class CodeableSpider : CodeableObject
 {
     public float movementStuckTolerance = 0.1f;
+    public bool isReal = true;
 
     protected float _speed = 4;
     protected Vector2 _direction = CodeProperties.FromDirection(CodeProperties.Direction.Vertical);
@@ -22,8 +24,11 @@ public class CodeableSpider : CodeableObject
     {
         base.UpdateProperties();
 
-        _speed = (float)properties["Speed Field"];
-        _direction = (Vector2)properties["Direction Field"];
+        if (isReal)
+        {
+            _speed = (float)properties["Speed Field"];
+            _direction = (Vector2)properties["Direction Field"];
+        }
     }
 
     public static void Move(object sender)
@@ -42,6 +47,9 @@ public class CodeableSpider : CodeableObject
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.SendMessage("Die");
+        if (collision.gameObject.GetComponent<PlayerController>() != null)
+        {
+            collision.gameObject.SendMessage("Die");
+        }
     }
 }
