@@ -190,6 +190,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19118193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+  m_PrefabInstance: {fileID: 477389389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c0c1f5d12a37c49834e1a190f33656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &39939462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +209,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (2)
@@ -471,6 +486,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (5)
@@ -616,6 +635,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (6)
@@ -743,6 +766,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (4)
@@ -1139,9 +1166,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: defaultBlock
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 19118193}
     - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: value
       value: 2
@@ -1213,6 +1244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (1)
@@ -2625,8 +2660,8 @@ Tilemap:
   - first: {x: -15, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3116,7 +3151,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 4b234af69d2b392648443d54764b6d5a, type: 2}
-  - m_RefCount: 7
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 79b3e5bdb932ba9dc91c3bb710e51d6e, type: 2}
   - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: 50b79bb556fd95b07b25e11427041c84, type: 2}
@@ -3130,14 +3165,14 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 15e9d7ccdd03965deb533034470aa7be, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 881d2abb505046a7b92dbcb9d6ab1e46, type: 2}
-  - m_RefCount: 6
+  - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 9e2385adb727718afaa528635764e685, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 5
     m_Data: {fileID: 254780322, guid: 633f4f502adb2df13acc8752028dcf29, type: 3}
-  - m_RefCount: 7
+  - m_RefCount: 6
     m_Data: {fileID: -1033839650, guid: 633f4f502adb2df13acc8752028dcf29, type: 3}
   - m_RefCount: 18
     m_Data: {fileID: 1131455229, guid: 633f4f502adb2df13acc8752028dcf29, type: 3}
@@ -3151,7 +3186,7 @@ Tilemap:
     m_Data: {fileID: 1449792561, guid: 633f4f502adb2df13acc8752028dcf29, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 1268631860, guid: 633f4f502adb2df13acc8752028dcf29, type: 3}
-  - m_RefCount: 6
+  - m_RefCount: 7
     m_Data: {fileID: 736887397, guid: 633f4f502adb2df13acc8752028dcf29, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -4234,7 +4269,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7c3e15683d2f10248884a9190bfd8cee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7856,6 +7891,10 @@ PrefabInstance:
     - target: {fileID: 5983167900874201347, guid: 3b932260bcc8a3b44a6b3ad55fbff21f, type: 3}
       propertyPath: m_Name
       value: Shape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983167900874201347, guid: 3b932260bcc8a3b44a6b3ad55fbff21f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6080353962017163025, guid: 3b932260bcc8a3b44a6b3ad55fbff21f, type: 3}
       propertyPath: terminalCodeSection

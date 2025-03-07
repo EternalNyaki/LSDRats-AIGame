@@ -7,7 +7,7 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     //Reference to a player that could interact with this object
-    private PlayerController _player = null;
+    protected PlayerController _player = null;
 
     // Update is called once per frame
     void Update()
@@ -27,10 +27,17 @@ public class InteractableObject : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Clear the player reference
-        if (_player.gameObject == collision.gameObject)
+        if (_player != null && _player.gameObject == collision.gameObject)
         {
             _player = null;
         }
+
+        AfterExit();
+    }
+
+    protected virtual void AfterExit()
+    {
+
     }
 
     //Interact Method
