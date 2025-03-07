@@ -100,7 +100,7 @@ public abstract class CodeableObject : MonoBehaviour
     {
         foreach (Action<object> a in actions)
         {
-            a.Invoke(this);
+            a?.Invoke(this);
         }
     }
 }
