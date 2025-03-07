@@ -39,4 +39,9 @@ public class CodeableSpider : CodeableObject
         }
         _rb2d.velocity = _direction * _speed;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.gameObject.SendMessage("Die");
+    }
 }

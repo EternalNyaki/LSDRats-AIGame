@@ -56,4 +56,9 @@ public class CodeableShape : CodeableObject
                 break;
         }
     }
+
+    void OllisionEnter2D(Collision2D collision)
+    {
+        collision.gameObject.SendMessage("Die");
+    }
 }

@@ -7717,6 +7717,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3048957983374445105, guid: dbaa256ba83d4a74bbbf280d58e63475, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: a2b272ce7c1fb7449a6bf71b3ec39997, type: 3}
     - target: {fileID: 3237634545258285051, guid: dbaa256ba83d4a74bbbf280d58e63475, type: 3}
       propertyPath: m_Name
       value: Text Box Canvas

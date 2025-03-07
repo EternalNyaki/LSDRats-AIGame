@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,12 +16,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Die();
+        }
     }
 
     private void Die()
     {
-        transform.position = spawnPoint.position;
-        Debug.Log("whoops you died");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

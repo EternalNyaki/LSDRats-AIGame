@@ -39,44 +39,51 @@ public abstract class CodeableObject : MonoBehaviour
 
     protected void LoadProperties()
     {
-        properties.Clear();
+        Dictionary<string, object> temp = new Dictionary<string, object>();
 
         foreach (UIPropertySlot codeSlot in terminalCodeSection.GetComponentsInChildren<UIPropertySlot>())
         {
-            if (codeSlot.heldBlock == null) { continue; }
-
-            switch (codeSlot.GetAttachedCodeType())
+            if (codeSlot.heldBlock == null)
             {
-                case CodeBlockType.NumberProperty:
-                    properties.Add(codeSlot.gameObject.name, codeSlot.GetAttachedPropertyValue());
-                    break;
+                temp.Add(codeSlot.gameObject.name, properties[codeSlot.gameObject.name]);
+            }
+            else
+            {
+                switch (codeSlot.GetAttachedCodeType())
+                {
+                    case CodeBlockType.NumberProperty:
+                        temp.Add(codeSlot.gameObject.name, codeSlot.GetAttachedPropertyValue());
+                        break;
 
-                case CodeBlockType.EnumProperty:
-                    switch (CodeProperties.PropertyTypeFromType(codeSlot.GetAttachedPropertyValue().GetType()))
-                    {
-                        case CodeProperties.PropertyType.Boolean:
-                            properties.Add(codeSlot.gameObject.name, CodeProperties.FromBoolValue((CodeProperties.BoolValue)codeSlot.GetAttachedPropertyValue()));
-                            break;
+                    case CodeBlockType.EnumProperty:
+                        switch (CodeProperties.PropertyTypeFromType(codeSlot.GetAttachedPropertyValue().GetType()))
+                        {
+                            case CodeProperties.PropertyType.Boolean:
+                                temp.Add(codeSlot.gameObject.name, CodeProperties.FromBoolValue((CodeProperties.BoolValue)codeSlot.GetAttachedPropertyValue()));
+                                break;
 
-                        case CodeProperties.PropertyType.Color:
-                            properties.Add(codeSlot.gameObject.name, CodeProperties.FromColorValue((CodeProperties.ColorValue)codeSlot.GetAttachedPropertyValue()));
-                            break;
+                            case CodeProperties.PropertyType.Color:
+                                temp.Add(codeSlot.gameObject.name, CodeProperties.FromColorValue((CodeProperties.ColorValue)codeSlot.GetAttachedPropertyValue()));
+                                break;
 
-                        case CodeProperties.PropertyType.Size:
-                            properties.Add(codeSlot.gameObject.name, (CodeProperties.Size)codeSlot.GetAttachedPropertyValue());
-                            break;
+                            case CodeProperties.PropertyType.Size:
+                                temp.Add(codeSlot.gameObject.name, (CodeProperties.Size)codeSlot.GetAttachedPropertyValue());
+                                break;
 
-                        case CodeProperties.PropertyType.Shape:
-                            properties.Add(codeSlot.gameObject.name, (CodeProperties.Shape)codeSlot.GetAttachedPropertyValue());
-                            break;
+                            case CodeProperties.PropertyType.Shape:
+                                temp.Add(codeSlot.gameObject.name, (CodeProperties.Shape)codeSlot.GetAttachedPropertyValue());
+                                break;
 
-                        case CodeProperties.PropertyType.Direction:
-                            properties.Add(codeSlot.gameObject.name, CodeProperties.FromDirection((CodeProperties.Direction)codeSlot.GetAttachedPropertyValue()));
-                            break;
-                    }
-                    break;
+                            case CodeProperties.PropertyType.Direction:
+                                temp.Add(codeSlot.gameObject.name, CodeProperties.FromDirection((CodeProperties.Direction)codeSlot.GetAttachedPropertyValue()));
+                                break;
+                        }
+                        break;
+                }
             }
         }
+
+        properties = temp;
     }
 
     protected void LoadActions()
