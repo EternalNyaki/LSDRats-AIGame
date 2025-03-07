@@ -25,6 +25,15 @@ public abstract class CodeableObject : MonoBehaviour
 
     void OnEnable()
     {
+        StartCoroutine(LateEnable());
+    }
+
+    private IEnumerator LateEnable()
+    {
+        yield return new WaitForFixedUpdate();
+
+        Debug.Log(gameObject.name + "Enabled");
+
         LoadProperties();
         LoadActions();
 

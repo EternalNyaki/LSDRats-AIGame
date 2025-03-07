@@ -11,11 +11,23 @@ public class CodeableHungrySpider : CodeableSpider
 
     private NavMeshAgent _agent;
 
-    protected override void UpdateProperties()
+    protected override void Initialize()
     {
+        base.Initialize();
+
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
+    }
+
+    void OnDisable()
+    {
+        _agent.enabled = false;
+    }
+
+    protected override void UpdateProperties()
+    {
+        _agent.enabled = true;
     }
 
     protected override void MoveSelf()

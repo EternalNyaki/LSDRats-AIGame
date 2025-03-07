@@ -38,11 +38,14 @@ public class CodeableSpider : CodeableObject
 
     protected virtual void MoveSelf()
     {
-        if (_rb2d.velocity.magnitude <= movementStuckTolerance * Time.deltaTime)
+        if (isReal)
         {
-            _direction *= -1;
+            if (_rb2d.velocity.magnitude <= movementStuckTolerance * Time.deltaTime)
+            {
+                _direction *= -1;
+            }
+            _rb2d.velocity = _direction * _speed;
         }
-        _rb2d.velocity = _direction * _speed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

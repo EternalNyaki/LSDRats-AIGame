@@ -10,7 +10,6 @@ public class UIDropZone : UIHoverable
 
     [NonSerialized] public UIDraggableBlock heldBlock;
 
-#if UNITY_EDITOR
     void OnValidate()
     {
         if (heldBlock == null && defaultBlock != null)
@@ -18,14 +17,20 @@ public class UIDropZone : UIHoverable
             heldBlock = defaultBlock;
         }
     }
-#endif
 
     // Start is called before the first frame update
     protected override void Initialize()
     {
         base.Initialize();
 
-        if (defaultBlock != null) { AttachBlock(defaultBlock); }
+        Debug.Log(gameObject.name + "Initialize");
+
+        if (defaultBlock != null)
+        {
+            heldBlock = defaultBlock;
+            defaultBlock.rectTransform.SetParent(rectTransform, false);
+            defaultBlock.rectTransform.anchoredPosition = Vector2.zero;
+        }
     }
 
     protected override void OnPointerEnter()

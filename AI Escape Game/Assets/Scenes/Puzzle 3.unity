@@ -2936,7 +2936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &321440926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7357,19 +7357,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1205992335620119590, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1205992335620119590, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1528159221068007280, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.9883562
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1528159221068007280, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2894711917374140076, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7393,19 +7393,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3427102781341106323, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3427102781341106323, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3427102781341106323, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3427102781341106323, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3782651728708149198, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_Name
@@ -7417,15 +7417,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4811251721149398233, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4811251721149398233, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4811251721149398233, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.01700002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5217374334984943343, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_Name
@@ -7537,11 +7537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7019390294133817763, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7019390294133817763, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7796247124597789718, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       propertyPath: m_Name
@@ -8071,6 +8071,10 @@ PrefabInstance:
     - target: {fileID: 3237634545258285051, guid: dbaa256ba83d4a74bbbf280d58e63475, type: 3}
       propertyPath: m_Name
       value: Text Box Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237634545258285051, guid: dbaa256ba83d4a74bbbf280d58e63475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540176688537804870, guid: dbaa256ba83d4a74bbbf280d58e63475, type: 3}
       propertyPath: m_Pivot.x

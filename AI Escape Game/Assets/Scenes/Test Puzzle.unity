@@ -190,17 +190,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &19118193 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-  m_PrefabInstance: {fileID: 477389389}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c0c1f5d12a37c49834e1a190f33656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &39939462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216,6 +205,30 @@ PrefabInstance:
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6473812798936595246, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -260,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 6828125464910506067, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: terminalCodeSection
       value: 
-      objectReference: {fileID: 477389393}
+      objectReference: {fileID: 469979261}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -354,6 +367,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserEmitter (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473812798936595246, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.71
@@ -397,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 6828125464910506067, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: terminalCodeSection
       value: 
-      objectReference: {fileID: 477389393}
+      objectReference: {fileID: 469979261}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -467,6 +504,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserEmitter (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473812798936595246, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.71
@@ -510,7 +571,7 @@ PrefabInstance:
     - target: {fileID: 6828125464910506067, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: terminalCodeSection
       value: 
-      objectReference: {fileID: 477389393}
+      objectReference: {fileID: 469979261}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -598,6 +659,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserEmitter (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473812798936595246, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.71
@@ -641,7 +726,7 @@ PrefabInstance:
     - target: {fileID: 6828125464910506067, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: terminalCodeSection
       value: 
-      objectReference: {fileID: 477389393}
+      objectReference: {fileID: 469979261}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -849,7 +934,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &477389389
+--- !u!1001 &469979259
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -857,163 +942,104 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1377782369870295746}
     m_Modifications:
-    - target: {fileID: 1012514986296144525, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_Name
-      value: Color Field
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2765423713958717308, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    - target: {fileID: 8014544789262001756, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
       propertyPath: m_Name
-      value: Laser Terminal
-      objectReference: {fileID: 0}
-    - target: {fileID: 2765423713958717308, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: locked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: defaultBlock
-      value: 
-      objectReference: {fileID: 19118193}
-    - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3955376447912976970, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019119756178447656, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019119756178447656, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 543
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019119756178447656, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -153
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163046494911732767, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_text
-      value: Green
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163046494911732767, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163046494911732767, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.9881396
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163046494911732767, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294966272
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615520254885025492, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-      propertyPath: m_text
-      value: "LaserHazard {\n\t\n\tDrawLaser(Color:               );\n\t\n\tWhen
-        CollideWithObject {\n\t\t\n\t\tDelete(object);\n\n\t}\n\n}"
+      value: Laser Terminal Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1262716829880005024, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-    - {fileID: 4628305338074080215, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
---- !u!224 &477389390 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
+--- !u!224 &469979260 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2709193440634395509, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-  m_PrefabInstance: {fileID: 477389389}
+  m_CorrespondingSourceObject: {fileID: 7836647245386406485, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
+  m_PrefabInstance: {fileID: 469979259}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &477389393 stripped
+--- !u!1 &469979261 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2765423713958717308, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
-  m_PrefabInstance: {fileID: 477389389}
+  m_CorrespondingSourceObject: {fileID: 8014544789262001756, guid: 4ae7e18d3cea89349933248dfc895d2d, type: 3}
+  m_PrefabInstance: {fileID: 469979259}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &537677971 stripped
 RectTransform:
@@ -1035,6 +1061,30 @@ PrefabInstance:
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6473812798936595246, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1079,7 +1129,7 @@ PrefabInstance:
     - target: {fileID: 6828125464910506067, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: terminalCodeSection
       value: 
-      objectReference: {fileID: 477389393}
+      objectReference: {fileID: 469979261}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2645,7 +2695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectTerminals:
   - {fileID: 1378102928}
-  - {fileID: 477389393}
+  - {fileID: 469979261}
   - {fileID: 1031271241}
   - {fileID: 898412884}
   objectDropdown: {fileID: 80146890}
@@ -2830,7 +2880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1097050886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6427,7 +6477,7 @@ PrefabInstance:
       addedObject: {fileID: 1378102927}
     - targetCorrespondingSourceObject: {fileID: 6740239944837160953, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 477389390}
+      addedObject: {fileID: 469979260}
     - targetCorrespondingSourceObject: {fileID: 6740239944837160953, guid: 02df4194e687e3f46a11f93dd5ee0544, type: 3}
       insertIndex: -1
       addedObject: {fileID: 256152734}
@@ -6853,6 +6903,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserEmitter
       objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343601141160542849, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473812798936595246, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.5
@@ -6896,7 +6970,7 @@ PrefabInstance:
     - target: {fileID: 6828125464910506067, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: terminalCodeSection
       value: 
-      objectReference: {fileID: 477389393}
+      objectReference: {fileID: 469979261}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
