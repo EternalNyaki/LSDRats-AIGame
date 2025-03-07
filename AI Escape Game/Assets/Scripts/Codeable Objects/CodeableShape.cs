@@ -8,6 +8,8 @@ public class CodeableShape : CodeableObject
     public Sprite cubeSprite;
     public Sprite sphereSprite;
 
+    public Color color;
+
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rb2d;
 
@@ -24,6 +26,7 @@ public class CodeableShape : CodeableObject
         base.UpdateProperties();
 
         _spriteRenderer.color = (Color)properties["Color Field"];
+        color = _spriteRenderer.color;
 
         switch ((CodeProperties.Shape)properties["Shape Field"])
         {

@@ -190,6 +190,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19118193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+  m_PrefabInstance: {fileID: 477389389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c0c1f5d12a37c49834e1a190f33656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &39939462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +209,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (2)
@@ -471,6 +486,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (5)
@@ -616,6 +635,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (6)
@@ -743,6 +766,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (4)
@@ -1139,9 +1166,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840882464183587818, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: defaultBlock
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 19118193}
     - target: {fileID: 3858571054726341193, guid: 384c3d2480cdff64094934bcad5dbdc1, type: 3}
       propertyPath: value
       value: 2
@@ -1213,6 +1244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966542973233743584, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4143190551240275183, guid: a2970136d0d649e42b58e6f1b5cc9e7b, type: 3}
       propertyPath: m_Name
       value: LaserEmitter (1)
@@ -7856,6 +7891,10 @@ PrefabInstance:
     - target: {fileID: 5983167900874201347, guid: 3b932260bcc8a3b44a6b3ad55fbff21f, type: 3}
       propertyPath: m_Name
       value: Shape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983167900874201347, guid: 3b932260bcc8a3b44a6b3ad55fbff21f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6080353962017163025, guid: 3b932260bcc8a3b44a6b3ad55fbff21f, type: 3}
       propertyPath: terminalCodeSection
