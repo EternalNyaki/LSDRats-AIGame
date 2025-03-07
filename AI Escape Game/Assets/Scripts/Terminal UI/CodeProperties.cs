@@ -12,7 +12,8 @@ public static class CodeProperties
         Boolean,
         Color,
         Size,
-        Shape
+        Shape,
+        Direction
     }
 
     public enum BoolValue
@@ -47,6 +48,12 @@ public static class CodeProperties
         Sphere
     }
 
+    public enum Direction
+    {
+        Horizontal,
+        Vertical
+    }
+
     public static Type ConvertToType(PropertyType p)
     {
         switch (p)
@@ -57,6 +64,7 @@ public static class CodeProperties
             case PropertyType.Color: return typeof(ColorValue);
             case PropertyType.Size: return typeof(Size);
             case PropertyType.Shape: return typeof(Shape);
+            case PropertyType.Direction: return typeof(Direction);
 
             default: throw new Exception($"PropertyType {p} does not have an associated type");
         }
@@ -70,6 +78,7 @@ public static class CodeProperties
         if (t == typeof(Color) || t == typeof(ColorValue)) { return PropertyType.Color; }
         if (t == typeof(Size)) { return PropertyType.Size; }
         if (t == typeof(Shape)) { return PropertyType.Shape; }
+        if (t == typeof(Direction)) { return PropertyType.Direction; }
 
         throw new ArgumentException($"Type {t} has no associated property type");
     }
@@ -100,6 +109,17 @@ public static class CodeProperties
             case ColorValue.Black: return Color.black;
 
             default: throw new Exception($"ColorValue {value} does not have a Color equivalent");
+        }
+    }
+
+    public static Vector2 FromDirection(Direction value)
+    {
+        switch (value)
+        {
+            case Direction.Horizontal: return Vector2.right;
+            case Direction.Vertical: return Vector2.up;
+
+            default: throw new Exception($"Direction {value} does not have a Direction equivalent");
         }
     }
 }

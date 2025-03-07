@@ -91,6 +91,5 @@ public class DialogueManager : Singleton<DialogueManager>
                 story.ResetState();
             }
         }
-
     }
 }

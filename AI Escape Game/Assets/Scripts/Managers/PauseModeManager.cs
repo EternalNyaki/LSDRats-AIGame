@@ -29,7 +29,6 @@ public class PauseModeManager : Singleton<PauseModeManager>
         switch (mode)
         {
             case PauseMode.Unpaused:
-
                 terminalCanvas.gameObject.SetActive(false);
                 dialogueCanvas.gameObject.SetActive(false);
                 foreach (CodeableObject o in FindObjectsOfType<CodeableObject>())
@@ -38,12 +37,15 @@ public class PauseModeManager : Singleton<PauseModeManager>
                 }
 
                 playerMovement.enabled = true;
-
-
                 break;
 
             case PauseMode.Dialogue:
                 dialogueCanvas.gameObject.SetActive(true);
+                foreach (CodeableObject o in FindObjectsOfType<CodeableObject>())
+                {
+                    o.enabled = true;
+                }
+
                 playerMovement.enabled = false;
                 break;
 
@@ -57,5 +59,7 @@ public class PauseModeManager : Singleton<PauseModeManager>
                 playerMovement.enabled = false;
                 break;
         }
+
+        pauseMode = mode;
     }
 }

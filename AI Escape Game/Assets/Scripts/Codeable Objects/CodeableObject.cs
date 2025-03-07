@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class CodeableObject : MonoBehaviour
 {
     public Dictionary<string, object> properties;
-    public List<Action> actions;
+    public List<Action<object>> actions;
 
     public GameObject terminalCodeSection;
 
@@ -20,7 +20,7 @@ public abstract class CodeableObject : MonoBehaviour
     protected virtual void Initialize()
     {
         properties = new Dictionary<string, object>();
-        actions = new List<Action>();
+        actions = new List<Action<object>>();
     }
 
     void OnEnable()
@@ -69,6 +69,10 @@ public abstract class CodeableObject : MonoBehaviour
                         case CodeProperties.PropertyType.Shape:
                             properties.Add(codeSlot.gameObject.name, (CodeProperties.Shape)codeSlot.GetAttachedPropertyValue());
                             break;
+
+                        case CodeProperties.PropertyType.Direction:
+                            properties.Add(codeSlot.gameObject.name, CodeProperties.FromDirection((CodeProperties.Direction)codeSlot.GetAttachedPropertyValue()));
+                            break;
                     }
                     break;
             }
@@ -94,6 +98,9 @@ public abstract class CodeableObject : MonoBehaviour
 
     protected virtual void PlayActions()
     {
-
+        foreach (Action<object> a in actions)
+        {
+            a?.Invoke(this);
+        }
     }
 }
