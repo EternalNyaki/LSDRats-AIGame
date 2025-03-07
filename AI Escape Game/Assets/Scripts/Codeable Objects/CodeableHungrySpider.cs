@@ -22,7 +22,7 @@ public class CodeableHungrySpider : CodeableSpider
     {
         if (cookie == null)
         {
-            cookie = Physics2D.OverlapCircle(transform.position, 10f, cookieLayerMask)?.GetComponent<Cookie>();
+            cookie = Physics2D.OverlapCircle(transform.position, 7f, cookieLayerMask)?.GetComponent<Cookie>();
         }
         else
         {
